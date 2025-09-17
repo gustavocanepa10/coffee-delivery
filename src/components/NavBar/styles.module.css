@@ -1,0 +1,60 @@
+
+.header {
+    padding: 2rem 10rem;
+    margin: auto;
+    
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+
+
+    
+
+
+    
+}
+
+.location {
+
+
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background-color: var(--purple-light);
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+
+
+    span {
+        color: var(--purple-dark);
+        font-size: 14px;
+        font-family: "Roboto";
+        
+    }
+}
+
+.action {
+    
+    display: flex;
+    gap: 12px;
+    align-items: center;
+   
+    
+}
+
+.cart {
+    background-color: var(--yellow-light);
+    border-radius: 8px;
+    padding: 8px;
+    height: 38px;
+    width: 38px;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,45 @@
+.main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 10rem;
+    justify-content: space-around;
+    
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4rem 0;
+    width: 588px;
+    gap: 1rem;
+
+    h1 {
+        color: var(--base-title);
+        font-weight: 900;
+        font-family: "Baloo 2";
+        font-size:42px;
+        
+    }
+
+    span {
+        color: var(--base-subtitle);
+    }
+}
+
+.itens {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 4rem;
+    gap: 20px;
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        white-space: nowrap;
+    }
+}
+

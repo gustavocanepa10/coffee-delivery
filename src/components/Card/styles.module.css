@@ -1,0 +1,84 @@
+.cardContainer {
+  background-color: var(--base-card);
+  border-radius: 8px 53px 8px 30px; 
+
+  display: flex;
+  gap: 12px;
+  width: 256px;
+  height: 310px;
+  flex-direction: column;
+  align-items: center;
+  
+
+  
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.tag {
+    background-color: var(--yellow-light);
+    width: 85px;
+    height: 21px;
+    border-radius: 8px ;
+    display: flex;
+    align-items: center;
+    color: var(--yellow-dark);
+    justify-content: center;
+    padding: 4px 8px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "Baloo 2";
+      
+      
+    
+    
+  }
+
+
+.cardImg {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: -1rem; 
+  border-radius: 50%;
+  
+}
+
+
+h2 {
+  color: var(--base-subtitle);
+  font-family: "Baloo 2";
+  font-weight: bolder;
+  font-size: 22px;
+
+}
+
+p {
+  color: var(--base-label);
+  text-align: center;
+}
+
+.buy {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+
+
+  span {
+     font-family: 'Baloo 2';
+     font-size: 16px;
+     color: var(--base-text);
+
+    strong {
+      font-weight: 900;
+      font-size: 22px;
+    }
+  }
+}
