@@ -88,6 +88,18 @@
     }
   }
 }
+.cartButton {
+  width: 38px;
+  height: 38px;
+  padding: 8px;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--purple-dark);
+}
+
 
 .counter {
   width: 72px;
@@ -101,27 +113,11 @@
   gap: 4px;
 
 
-  span {
-    color: var(--base-title);
-    font-size: large;
-  }
+  
 }
 
-button {
-  border: none;
-  background-color: transparent;
-  padding: 3px;
-  cursor: pointer;
-}
 
-.cartButton {
-  width: 38px;
-  height: 38px;
-  background-color: var(--purple-dark);
-  padding: 8px;
-  border-radius: 8px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+
+
