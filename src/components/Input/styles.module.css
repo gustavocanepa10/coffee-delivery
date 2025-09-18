@@ -1,0 +1,16 @@
+.input {
+    padding: 12px;
+    background: var(--base-input);
+    border: none;
+    border-radius: 8px;
+    /* box-shadow: 1px solid var(--base-text); */
+    outline: none;
+    
+    
+} 
+
+.input::placeholder {
+    color: var(--base-label);
+    font-family: "Roboto";
+    font-weight: 1.3;
+}
