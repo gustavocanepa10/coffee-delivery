@@ -41,8 +41,8 @@ body, html {
     padding: 0 1rem;
 
     display: grid;
-    grid-template-columns: 256px 1fr;
-    gap: 4rem;
+    grid-template-columns: 670px 1fr;
+    gap: 3rem;
     align-items: flex-start;
 
 }
