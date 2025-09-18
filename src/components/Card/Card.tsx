@@ -21,16 +21,35 @@ export function Card({ src, description, name, price }: CardProps) {
     <li className={styles.cardContainer}>
       <img className={styles.cardImg} src={src} alt="" />
 
-      <div className={styles.main}>
-        <span className={styles.tag}>Tradicional</span>
+        
+
+        <div className={styles.main}>
+
+        
 
         <h2>{name}</h2>
-        <p>
+        
+        
+        </div>
+
+        <div className={styles.description}>
           {description}
-        </p>
-      </div>
+        </div>
+
+        
+
+        
+
+        
+      
+
+      
 
       <div className={styles.buy}>
+
+         
+
+       
 
         <span>
           R$ <strong>{price}</strong>
