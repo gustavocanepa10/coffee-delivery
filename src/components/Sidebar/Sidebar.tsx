@@ -3,8 +3,29 @@ import Icon from "../../assets/Icon.svg";
 import Icone from "../../assets/icone.svg";
 import { Input } from "../Input/Input";
 import { Bank, CreditCard, Money } from "phosphor-react";
+import {useForm} from "react-hook-form"
+
+interface OrderProps {
+  CEP : string,
+  street : string,
+  number : number,
+  complement : string,
+  neighborhood : string,
+  city : string
+  payment : "credit" | "debit" | "money"
+}
 
 export function Sidebar() {
+
+  const {register, handleSubmit} = useForm<OrderProps>()
+
+  function onSubmit(data : OrderProps ) {
+
+    console.log(data)
+
+  }
+
+
   return (
     <aside className={styles.sidebar}>
       <h2 className={styles.title}>Complete seu pedido</h2>
@@ -19,14 +40,14 @@ export function Sidebar() {
           </div>
         </div>
 
-        <form action="">
-          <Input placeholder="CEP" type="text" />
-          <Input placeholder="Rua" type="text" />
+        <form onSubmit={handleSubmit(onSubmit)} action="">
+          <Input required {...register("CEP")} placeholder="CEP" id="CEP" type="text" />
+          <Input {...register("street")} required placeholder="Rua" type="text" />
           <div className={styles.formDiv}>
-            <Input placeholder="Número" type="text" />
-            <Input placeholder="Complemento" type="text" />
-            <Input placeholder="Bairro" type="text" />
-            <Input placeholder="Cidade" type="text" />
+            <Input required  {...register("number")} id="Número" placeholder="Número" type="text" />
+            <Input required  {...register("complement")} id="Complemento" placeholder="Complemento" type="text" />
+            <Input  required {...register("neighborhood")} id="Bairro" placeholder="Bairro" type="text" />
+            <Input required  {...register("city")} id="Cidade" placeholder="Cidade" type="text" />
           </div>
         </form>
       </div>
@@ -45,19 +66,19 @@ export function Sidebar() {
           </div>
 
           <div className={styles.payTypes}>
-            <input type="radio" id="credit" name="payment" value="credit" />
+            <input {...register("payment")} type="radio" id="credit" name="" value="credit" />
             <label htmlFor="credit">
               <CreditCard size={20} color="#8047F8" />
               CARTÃO DE CRÉDITO
             </label>
 
-            <input type="radio" id="debit" name="payment" value="debit" />
+            <input {...register("payment")} type="radio" id="debit" name="payment" value="debit" />
             <label htmlFor="debit">
               <Bank size={20} color="#8047F8" />
               CARTÃO DE DÉBITO
             </label>
 
-            <input type="radio" id="money" name="payment" value="money" />
+            <input {...register("payment")} type="radio" id="money" name="payment" value="money" />
             <label htmlFor="money">
               <Money size={20} color="#8047F8" />
               DINHEIRO

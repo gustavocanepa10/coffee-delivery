@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
+    "lucide-react": "^0.544.0",
     "phosphor": "^0.7.1",
     "phosphor-icons": "^1.4.2",
     "phosphor-react": "^1.4.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-hook-form": "^7.62.0",
     "react-router": "^7.9.1"
   },
   "devDependencies": {
