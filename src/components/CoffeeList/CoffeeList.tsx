@@ -13,7 +13,7 @@ export function CoffeeList() {
             </h2>
             <ul className={styles.coffeeList}>
 
-                {coffeeList.map((coffee) => <Card src={coffee.image} description = {coffee.description} name={coffee.name} price = {coffee.price} />)}
+                {coffeeList.map((coffee) => <Card key={coffee.id} src={coffee.image} description = {coffee.description} title={coffee.title} price = {coffee.price} />)}
 
             </ul>
         </div>

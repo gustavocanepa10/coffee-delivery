@@ -1,14 +1,29 @@
 
+import { useContext } from "react"
 import { CardCoffeePay } from "../CardCoffeePay/CardCoffeePay"
 import styles from "./styles.module.css"
+import { DataContext } from "../../Context/DataContext"
 
 export function CardContainerPay() {
+    
+    
+
+    const {Items} = useContext(DataContext)
+    
+   
+    
+
     return (
         <div className={styles.container}>
             <h2 className={styles.title}>Cafés selecionados</h2>
 
             <div className={styles.cardContainer}>
-                <CardCoffeePay/>
+
+                {Items?.map((item) => <CardCoffeePay key={item.title} src = {item.src} title = {item.title} price = {item.price}  />)}
+
+               
+
+                
                 
 
 
