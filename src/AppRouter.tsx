@@ -2,7 +2,7 @@ import { Routes, Route, BrowserRouter } from "react-router";
 import { Home } from "./pages/Home";
 import { CheckoutPage } from "./pages/CheckoutPage";
 import { DataContextProvider } from "./Context/DataContext";
-import { Sucess } from "./pages/Sucess";
+import { Sucess } from "./pages/Sucess/Sucess";
 
 
 export function AppRouter() {
