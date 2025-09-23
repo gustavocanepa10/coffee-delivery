@@ -23,6 +23,11 @@ export function Card({ src, description, title, price }: CardProps) {
   
     
     const {addToList} = useContext(DataContext)
+
+    const priceFormatted = price.toLocaleString("pt-BR", {
+      style : "currency",
+      currency : "BRL"
+    })
   
 
   return (
@@ -31,18 +36,16 @@ export function Card({ src, description, title, price }: CardProps) {
 
       <div className={styles.main}>
         <h2>{title}</h2>
-      </div>
-
-      <div className={styles.description}>{description}</div>
-
-      <div className={styles.buy}>
         <span>
-          R$ <strong>{price}</strong>
+          {description}
         </span>
 
-        {/* <div className={styles.counter}>
-          <ButtonCount />
-        </div> */}
+
+        <div className={styles.price}>
+
+          <p>
+          R$ <strong>{priceFormatted.replace("R$", "")}</strong>
+        </p>
 
         <NavLink to="/checkout">
           <button onClick={() => addToList({src,description,title,price})}   className={styles.cartButton}>
@@ -52,8 +55,21 @@ export function Card({ src, description, title, price }: CardProps) {
           
         </button>
         </NavLink>
+        </div>
         
+       
       </div>
+
+      
+
+     
+        
+
+        
+
+        
+        
+     
     </li>
   );
 }
