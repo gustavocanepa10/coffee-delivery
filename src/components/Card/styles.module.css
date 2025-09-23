@@ -17,31 +17,30 @@
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  gap: 1rem;
+  
 
   h2 {
     color: var(--base-subtitle);
     font-family: "Baloo 2";
   }
-}
 
-.description {
+  span {
   color: var(--base-label);
+  font-family: "Roboto";
+  font-size: 14px;
   text-align: center;
+
 }
 
-.tag {
-  background-color: var(--yellow-light);
-  width: 85px;
-  border-radius: 8px;
+.price {
   display: flex;
   align-items: center;
-  color: var(--yellow-dark);
-  justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-  font-family: "Baloo 2";
+  margin-top: 2rem;
+  gap: 1rem;
 }
+}
+
+
 
 .cardImg {
   width: 120px;
@@ -51,23 +50,7 @@
   border-radius: 50%;
 }
 
-.buy {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  justify-content: center;
 
-  span {
-    font-family: "Baloo 2";
-    font-size: 16px;
-    color: var(--base-text);
-
-    strong {
-      font-weight: 900;
-      font-size: 22px;
-    }
-  }
-}
 .cartButton {
   width: 38px;
   height: 38px;

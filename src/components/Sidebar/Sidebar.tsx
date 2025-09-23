@@ -3,9 +3,10 @@ import Icon from "../../assets/Icon.svg";
 import Icone from "../../assets/icone.svg";
 import { Input } from "../Input/Input";
 import { Bank, CreditCard, Money } from "phosphor-react";
-import {useForm} from "react-hook-form"
+import {type UseFormHandleSubmit, type UseFormRegister, type UseFormWatch} from "react-hook-form"
 
-interface OrderProps {
+
+export interface OrderProps {
   CEP : string,
   street : string,
   number : number,
@@ -15,15 +16,23 @@ interface OrderProps {
   payment : "credit" | "debit" | "money"
 }
 
-export function Sidebar() {
+interface SidebarProps {
+  onSubmit : (data : OrderProps) => void
+  handleSubmit : UseFormHandleSubmit<OrderProps, OrderProps>
+  watch : UseFormWatch<OrderProps>
+  register : UseFormRegister<OrderProps>
+}
 
-  const {register, handleSubmit} = useForm<OrderProps>()
+export function Sidebar({onSubmit, handleSubmit, watch, register} : SidebarProps) {
 
-  function onSubmit(data : OrderProps ) {
+  const selectedValue = watch("payment")
 
-    console.log(data)
 
-  }
+
+  
+
+
+  console.log(selectedValue)
 
 
   return (
@@ -49,15 +58,12 @@ export function Sidebar() {
             <Input  required {...register("neighborhood")} id="Bairro" placeholder="Bairro" type="text" />
             <Input required  {...register("city")} id="Cidade" placeholder="Cidade" type="text" />
           </div>
-        </form>
-      </div>
 
-      <div className={styles.payContainer}>
-        <div className={styles.payDiv}>
+          <div className={styles.payDiv}>
           <div className={styles.formHeader}>
             <img src={Icone} alt="Ícone de pagamento" />
 
-            <div>
+            <div className={styles.payInfo}>
               <span>Pagamento</span>
               <p>
                 O pagamento é feito na entrega. Escolha a forma que deseja pagar
@@ -66,26 +72,33 @@ export function Sidebar() {
           </div>
 
           <div className={styles.payTypes}>
-            <input {...register("payment")} type="radio" id="credit" name="" value="credit" />
+            <input {...register("payment")} type="radio" id="credit" name="payment" value="Cartão de Crédito" />
             <label htmlFor="credit">
               <CreditCard size={20} color="#8047F8" />
               CARTÃO DE CRÉDITO
             </label>
 
-            <input {...register("payment")} type="radio" id="debit" name="payment" value="debit" />
+            <input {...register("payment")} type="radio" id="debit" name="payment" value="Cartão de Débito" />
             <label htmlFor="debit">
               <Bank size={20} color="#8047F8" />
               CARTÃO DE DÉBITO
             </label>
 
-            <input {...register("payment")} type="radio" id="money" name="payment" value="money" />
+            <input {...register("payment")} type="radio" id="money" name="payment" value="Dinheiro" />
             <label htmlFor="money">
               <Money size={20} color="#8047F8" />
               DINHEIRO
             </label>
           </div>
         </div>
+        </form>
+
+        
       </div>
+
+      
+        
+    
     </aside>
   );
 }

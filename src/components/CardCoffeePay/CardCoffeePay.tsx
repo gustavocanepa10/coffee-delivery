@@ -42,7 +42,10 @@ export function CardCoffeePay({src,title, price} : CardProps) {
             </div>
           </div>
         </div>
-        <p>{price}</p>
+        <p>{price.toLocaleString("pt-BR", {
+          style : "currency",
+          currency : "BRL"
+        })}</p>
       </div>
 
       <div className={styles.divider}></div>

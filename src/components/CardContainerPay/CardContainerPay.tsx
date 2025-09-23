@@ -4,7 +4,12 @@ import { CardCoffeePay } from "../CardCoffeePay/CardCoffeePay"
 import styles from "./styles.module.css"
 import { DataContext } from "../../Context/DataContext"
 
-export function CardContainerPay() {
+
+interface CardContainerPayProps {
+    onConfirm : () => void
+}
+
+export function CardContainerPay({onConfirm} : CardContainerPayProps) {
     
     
 
@@ -28,7 +33,7 @@ export function CardContainerPay() {
 
 
 
-            <div className={styles.totalContainer} >
+            <div className={styles.totalContainer}>
 
             <div>
                 <span>Total de itens</span> <span>0</span>
@@ -42,7 +47,7 @@ export function CardContainerPay() {
 
         </div>
 
-        <button className={styles.buttonConfirmed}>
+        <button onClick={onConfirm} className={styles.buttonConfirmed}>
             CONFIRMAR PEDIDO
         </button>
                 
