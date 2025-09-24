@@ -9,12 +9,10 @@ import Illustration from "../../assets/Illustration.png"
 
 
 export function Sucess() {
-    const {orderData} = useContext(DataContext)
-    
+    const { orderData } = useContext(DataContext)
+
     return (
         <LayoutContainer>
-
-            
             <div className={styles.sucess}>
 
                 <h2>
@@ -30,22 +28,22 @@ export function Sucess() {
                         <div>
                             <img src={PinIcon} alt="" />
                             <span>
-                                Entrega em <strong>{orderData?.street}, {orderData?.number}</strong><br/>
+                                Entrega em <strong>{orderData?.street}, {orderData?.number}</strong><br />
                                 {orderData?.city}
                             </span>
                         </div>
                         <div>
                             <img src={ClockIcon} alt="" />
                             <span>
-                                Previsão de entrega <br/> <strong>20 min - 30 min</strong>
+                                Previsão de entrega <br /> <strong>20 min - 30 min</strong>
                             </span>
                         </div>
                         <div>
                             <img src={ClockIcon} alt="" />
                             <span>
-                                Pagamento na entrega <br/>
+                                Pagamento na entrega <br />
                                 <strong>{orderData?.payment}</strong>
-                                
+
                             </span>
                         </div>
                     </div>
@@ -53,8 +51,6 @@ export function Sucess() {
                         <img src={Illustration} alt="" />
                     </div>
                 </div>
-               
-
             </div>
         </LayoutContainer>
     )
