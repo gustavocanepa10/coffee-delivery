@@ -1,60 +1,54 @@
-
 .header {
-    padding: 2rem 10rem;
-    margin: auto;
+  padding: 2rem 10rem;
+  margin: auto;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
     
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-    }
-
-
-
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
     
-
-
-    
+  }
 }
 
 .location {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  background-color: var(--purple-light);
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
 
-
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    background-color: var(--purple-light);
-    border-radius: 8px;
-    padding: 8px;
-    cursor: pointer;
-    border: none;
-
-
-    span {
-        color: var(--purple-dark);
-        font-size: 14px;
-        font-family: "Roboto";
-        
-    }
+  span {
+    color: var(--purple-dark);
+    font-size: 14px;
+    font-family: "Roboto";
+  }
 }
 
 .action {
-    
-    display: flex;
-    gap: 12px;
-    align-items: center;
-   
-    
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 .cart {
-    background-color: var(--yellow-light);
-    border-radius: 8px;
-    padding: 8px;
-    height: 38px;
-    width: 38px;
-    border: none;
-    cursor: pointer;
+  background-color: var(--yellow-light);
+  border-radius: 8px;
+  padding: 8px;
+  height: 38px;
+  width: 38px;
+  border: none;
+  cursor: pointer;
 }
