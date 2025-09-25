@@ -28,10 +28,5 @@ Preenchimento de endereço de entrega
 
 Validação de formulário com React Hook Form
 
-Armazenamento temporário do pedido
+Armazenamento do pedido no LocalStorage
 
-
-
-Acesse a aplicação no navegador:
-
-http://localhost:5173
