@@ -6,8 +6,7 @@ import {useForm} from "react-hook-form"
 import { useContext } from "react";
 import { DataContext } from "../Context/DataContext";
 import {useNavigate} from "react-router"
-import {zodResolver} from "@hookform/resolvers/zod"
-import * as z from "zod"
+
 
 
 
@@ -27,13 +26,23 @@ export function CheckoutPage() {
     const {setOrderData} = useContext(DataContext)
 
   function onSubmit(data : OrderProps ) {
+    
     setOrderData(data)
+    if (data.CEP === null) return
+    if (data.city === null) return
+    if (data.complement === null) return
+    if (data.neighborhood === null) return
+    if (data.number === null) return
+    if (data.payment === null) return
+    if (data.street === null) return
+
+
     navigate("/sucess")
     console.log(data)
 
   }
 
-
+  
 
   
     return (
