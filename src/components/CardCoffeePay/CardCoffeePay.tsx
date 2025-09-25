@@ -16,7 +16,7 @@ interface CardProps {
 export function CardCoffeePay({src,title, price} : CardProps) {
 
 
-  const {Items, setItems} = useContext(DataContext)
+  const {setItems} = useContext(DataContext)
 
    function handleRemove(itemTitle : string) {
 

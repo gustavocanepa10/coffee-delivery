@@ -1,8 +1,5 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import styles from "./styles.module.css";
-
-import { ButtonCount } from "../ButtonCount/ButtonCount";
-
 import { ShoppingCartIcon } from "lucide-react";
 import { DataContext } from "../../Context/DataContext";
 import { NavLink } from "react-router";
